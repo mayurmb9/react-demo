@@ -39,3 +39,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.input-field{
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.label{
+  margin-right: 10px;
+  padding: 5px;
+}
