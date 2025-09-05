@@ -1,7 +1,7 @@
 import React from 'react'
 import Cat from './Cat'
 
-export default function Pet() {
+export default function Image() {
 
     function callFunction() {
         alert("Button Clicked")

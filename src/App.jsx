@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import JSX from './components/JSX'
-import Pet from './components/Pet'
+import Image from './components/Image'
 import Component from './components/Component'
 import ClickEvent from './components/ClickEvent'
 import State from './components/State'
@@ -13,9 +13,11 @@ import ControlledComponent from './components/ControlledComponent'
 import Checkbox from './components/Checkbox'
 import RadioDropDown from './components/RadioDropDown'
 import Loops from './components/Loops'
+import Hooks from './components/Hooks'
+import ThemeSwitcher from './components/ThemeSwitcher'
 
 function App() {
-  const [view, setView] = useState("pet") // default view
+  const [view, setView] = useState("image") 
 
 
 
@@ -31,7 +33,7 @@ function App() {
       }}>
 
         <button onClick={() => setView("component")}>Component</button>
-        <button onClick={() => setView("pet")}>Pet</button>
+        <button onClick={() => setView("image")}>Image</button>
 
 
         <button onClick={() => setView("jsx")}>JSX</button>
@@ -50,14 +52,15 @@ function App() {
         <button onClick={() => setView("radioDropdown")}>Radio & Dropdown</button>
 
         <button onClick={() => setView("loops")}>Loops</button>
-
+        <button onClick={() => setView("hooks")}>Hooks</button>
+        
 
       </nav>
 
       <hr />
 
       {view === "component" && <Component />}
-      {view === "pet" && <Pet />}
+      {view === "image" && <Image />}
 
       {view === "jsx" && <JSX />}
       {view === "clickEvent" && <ClickEvent />}
@@ -75,6 +78,7 @@ function App() {
       {view === "radioDropdown" && <RadioDropDown />}
 
       {view === "loops" && <Loops />}
+      {view === "hooks" && <Hooks />}
 
     </div>
   )
