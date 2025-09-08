@@ -8,10 +8,10 @@ export default function () {
 
   const inputRef = useRef(null);
 
-  useEffect(() => {
-    console.log("Everytime");
-    inputRef.current && inputRef.current.focus();
-  });
+  // useEffect(() => {
+  //   console.log("Everytime");
+  //   inputRef.current && inputRef.current.focus();
+  // });
 
   useEffect(() => {
     console.log("Only once");

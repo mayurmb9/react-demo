@@ -1,0 +1,31 @@
+[33mcommit 97b256b2df1dab60f32629588bdf567986fb83b1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelopment[m[33m)[m
+Author: mayur.borse  <mayur.borse@netwinindia.biz >
+Date:   Fri Sep 5 10:43:30 2025 +0530
+
+    Day 4: React Lifecycle, Hooks & Custom Hooks
+    
+    - Studied React lifecycle phases: Mount, Update, Unmount, and their behaviors.
+    - Understood Browser Paint, SSR, hydration, and revalidation concepts.
+    - Learned fundamental rules of React Hooks (naming, placement, restrictions).
+    - Practiced useState, useEffect, useRef, and useContext with examples.
+    - Explored and implemented custom hooks for reusable logic.
+
+[33mcommit 933cf0e7e7570eec3d943a0413773e656739c4dc[m[33m ([m[1;31morigin/development[m[33m)[m
+Author: mayur.borse  <mayur.borse@netwinindia.biz >
+Date:   Wed Sep 3 18:54:03 2025 +0530
+
+    Day 3: React Training - Props, Controlled Components & Forms
+    
+    - Learned and practiced props by passing data between components using variables, objects, arrays, and JSX.
+    - Implemented default props, style changes via props, and prop-based rendering.
+    - Worked with input fields: defining state, capturing/displaying values, and clearing inputs.
+    - Explored controlled components, built forms with validation, and compared with uncontrolled components.
+    - Implemented checkboxes, radio buttons, and dropdowns with default values and state management.
+    - Practiced rendering lists and tables using the map function.
+    - Reused components in loops with dynamic props and applied clean styling for better UI.
+
+[33mcommit 62d63aaee0a0d2d5b2ef4db8b40455ec360c09e0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: mayur.borse  <mayur.borse@netwinindia.biz >
+Date:   Tue Sep 2 17:45:17 2025 +0530
+
+    Initial Commit with React JS Training Second Day
