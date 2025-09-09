@@ -92,7 +92,7 @@ button:focus-visible {
   --color-text: rgba(255, 255, 255, 0.87);
   --color-bg: #242424;
   --color-link: #646cff;
-  --color-link-hover: #535bf2;
+  --color-link-hover: #f9f9f9;
   --color-button-bg: #1a1a1a;
   --color-button-border: transparent;
 }

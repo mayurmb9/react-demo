@@ -13,6 +13,7 @@ import Loops from './components/Loops'
 import MultiConditional from './components/MultiConditional'
 import Props from './components/Props'
 import RadioDropDown from './components/RadioDropDown'
+import Router from './components/Router'
 import State from './components/State'
 import Toggle from './components/Toggle'
 
@@ -22,7 +23,7 @@ function App() {
 
 
   return (
-    <div>
+    <div style={{ padding: "2rem"}}>
       <h3>React JS</h3>
       <nav style={{
         display: "flex",
@@ -31,6 +32,8 @@ function App() {
         alignItems: "center",
         gap: "1rem"
       }}>
+
+
 
         <button onClick={() => setView("component")}>Component</button>
         <button onClick={() => setView("image")}>Image</button>
@@ -55,6 +58,8 @@ function App() {
         <button onClick={() => setView("hooks")}>Hooks</button>
 
         <button onClick={() => setView("currencyConvertor")}>Currency Convertor</button>
+
+        <button onClick={() => setView("router")}>Router</button>
 
       </nav>
 
@@ -82,6 +87,8 @@ function App() {
       {view === "hooks" && <Hooks />}
 
       {view === "currencyConvertor" && <CurrencyConvertor />}
+
+      {view === "router" && <Router />}
 
     </div>
   )

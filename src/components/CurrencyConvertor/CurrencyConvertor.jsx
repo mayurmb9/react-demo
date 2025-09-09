@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../../App.css'
 import useCurrencyInfo from './hooks/useCurrencyInfo';
 import InputBox from './InputBox';
+import NavBar from '../NavBar';
 
 export default function CurrencyConvertor() {
     const [amount, setAmount] = useState(0);
@@ -25,11 +26,10 @@ export default function CurrencyConvertor() {
 
     return (
         <div 
-        style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
+        style={{display:"flex",flexDirection:"column",alignItems:"center", marginTop:"2rem"}}>
             <div className='currency-convertor'
                 style={{
-                   backgroundImage: "url(https://images.unsplash.com/photo-1692912364084-97b9ae31a8e1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
-
+                    backgroundImage: "url(https://images.unsplash.com/photo-1692912364084-97b9ae31a8e1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
                 }}
             >
                 <h2>Currency Convertor</h2>
