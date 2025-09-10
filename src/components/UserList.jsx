@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router';
 
 function UserList() {
     const userData = [
@@ -13,8 +14,16 @@ function UserList() {
         {
             userData.map(user => (
                 <div key={user.id}>
-                    <p>{user.name}</p>
-                    <p>{user.email}</p>
+                    <Link to={`/users/${user.id}`}>{user.name}</Link>
+                </div>
+            ))
+        }
+
+        <h2>User List with name in URL</h2>
+        {
+            userData.map(user => (
+                <div key={user.id}>
+                    <Link to={`/users/${user.id}/${user.name}`}>{user.name}</Link>
                 </div>
             ))
         }

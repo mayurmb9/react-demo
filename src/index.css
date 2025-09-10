@@ -80,6 +80,7 @@ button:focus-visible {
   /* Default (light theme) variables */
   --color-text: #213547;
   --color-bg: #ffffff;
+  --color-active: yellow;
   --color-link: #646cff;
   --color-link-hover: #747bff;
   --color-button-bg: #f9f9f9;
@@ -91,7 +92,8 @@ button:focus-visible {
 .dark {
   --color-text: rgba(255, 255, 255, 0.87);
   --color-bg: #242424;
-  --color-link: #646cff;
+  --color-active: yellow;
+  --color-link: yellow;
   --color-link-hover: #f9f9f9;
   --color-button-bg: #1a1a1a;
   --color-button-border: transparent;
@@ -101,6 +103,7 @@ button:focus-visible {
 .light {
   --color-text: #213547;
   --color-bg: #ffffff;
+  --color-active: red;
   --color-link: #646cff;
   --color-link-hover: #747bff;
   --color-button-bg: #f9f9f9;

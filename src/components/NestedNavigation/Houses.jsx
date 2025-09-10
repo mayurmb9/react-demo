@@ -1,18 +1,13 @@
 import { Link, NavLink, Outlet } from "react-router";
-
-const houses = [
-  { id: "", name: "Stark" },
-  { id: "lannister", name: "Lannister" },
-  { id: "targaryen", name: "Targaryen" }
-];
+import { houses } from "../../data/gotData";
 
 function Houses() {
   return (
     <div style={{ padding: "1rem" }}>
-      <h2>🏰 Houses</h2>
+      <h2>⚔️ Game of Thrones - Houses</h2>
       <div style={{ display: "flex", gap: "1rem" }}>
         {houses.map(h => (
-          <NavLink className={"link"} to={`/houses/${h.id}`}>{h.name.toUpperCase()}</NavLink>
+          <NavLink className={"link"} to={`/got/houses/${h.id}`}>{h.id.toUpperCase()}</NavLink>
         ))}
       </div>
       <Outlet />

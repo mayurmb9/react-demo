@@ -116,7 +116,7 @@
   padding: 1rem;
   align-items: center;
   background-color: #8cf0ff95;
-  border-radius: 10px ;
+  border-radius: 10px;
 }
 
 .header ul {
@@ -141,12 +141,134 @@
   color: var(--color-text);
   transition: border-color 0.25s;
 }
+
 .link:hover {
   border-color: var(--color-link);
 }
+
 .link:focus,
 .link:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.active {
+  font-weight: bold;
+  color: var(--color-active);
+}
 
+.custom-active {
+  color: var(--color-active);
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid var(--color-button-border);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: gray;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.item-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.item-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.item-card p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.item-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.item-card button:hover {
+  background-color: #45a049;
+}
+
+.cart {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cart h2 {
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.cart ul {
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 1.1rem;
+  color: #444;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cart li:last-child {
+  border-bottom: none;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  border-top: 2px solid #ddd;
+  padding-top: 12px;
+  text-align: right;
+}
+
+.cart-summary h5 {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.cart-empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 20px 0;
+}

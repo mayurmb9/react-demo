@@ -16,6 +16,8 @@ import RadioDropDown from './components/RadioDropDown'
 import Router from './components/Router'
 import State from './components/State'
 import Toggle from './components/Toggle'
+import ContextAPI from './components/ContextAPI/ContextAPI'
+import { CartProvider, SubjectProvider } from './components/ContextAPI/ContextData'
 
 function App() {
   const [view, setView] = useState("image")
@@ -23,7 +25,7 @@ function App() {
 
 
   return (
-    <div style={{ padding: "2rem"}}>
+    <div style={{ padding: "2rem" }}>
       <h3>React JS</h3>
       <nav style={{
         display: "flex",
@@ -61,6 +63,8 @@ function App() {
 
         <button onClick={() => setView("router")}>Router</button>
 
+        <button onClick={() => setView("context")}>Context API</button>
+
       </nav>
 
       <hr />
@@ -90,6 +94,11 @@ function App() {
 
       {view === "router" && <Router />}
 
+      <SubjectProvider>
+        <CartProvider>
+          {view === "context" && <ContextAPI />}
+        </CartProvider>
+      </SubjectProvider>
     </div>
   )
 }

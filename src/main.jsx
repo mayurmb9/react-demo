@@ -14,6 +14,9 @@ import Stark from './components/NestedNavigation/Stark.jsx'
 import Lannister from './components/NestedNavigation/Lannister.jsx'
 import Targaryen from './components/NestedNavigation/Targaryen.jsx'
 import UserList from './components/UserList.jsx'
+import House from './components/NestedNavigation/House.jsx'
+import Character from './components/NestedNavigation/Character.jsx'
+import UserDetail from './components/UserDetail.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,13 +26,23 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" Component={App} />
           <Route path="/convertor" Component={CurrencyConvertor} />
-          <Route path="/houses" Component={Houses} >
+          {/* <Route path="/houses" Component={Houses} >
             <Route index Component={Stark} />
             <Route path="lannister" Component={Lannister} />
             <Route path="targaryen" Component={Targaryen} />
+          </Route> */}
+
+          <Route path="/got/houses" element={<Houses />} />
+          <Route path="/got/houses/:houseId" element={<House />}>
+            <Route path=":characterId" element={<Character />} />
           </Route>
 
-          <Route path="/users" Component={UserList} />
+         
+          <Route path="/users/list?" Component={UserList} />
+          
+          <Route path="/users/:id/:name?" Component={UserDetail} />
+          
+          
 
           <Route path="/*" Component={PageNotFound} />
           {/* <Route path ="/*" element={<Navigate to="/" />} /> */}
