@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
+import Counter from './Counter';
 
 export default function State() {
 
 
-  const [fruit, setFruit] = useState("Apple")
+  const [fruit, setFruit] = useState("Apple");
+
 
   const handleChangeFruit = () => {
     setFruit("Banana")
@@ -17,6 +19,8 @@ export default function State() {
       <h3>{fruit}</h3>
 
       <button onClick={handleChangeFruit}>Change Fruit</button>
+      
+      <Counter />
 
     </div>
   )
