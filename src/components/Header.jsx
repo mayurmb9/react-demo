@@ -29,6 +29,12 @@ function Header() {
                     <li>
                         <NavLink className='link' to={"/users/list"}>List</NavLink>
                     </li>
+                    <li>
+                        <NavLink className='link' to={"/redux"}>Redux</NavLink>
+                    </li>
+                           <li>
+                        <NavLink className='link' to={"/reduxtoolkit"}>Redux Toolkit</NavLink>
+                    </li>
                 </ul>
             </div>
 

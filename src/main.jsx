@@ -17,37 +17,45 @@ import UserList from './components/UserList.jsx'
 import House from './components/NestedNavigation/House.jsx'
 import Character from './components/NestedNavigation/Character.jsx'
 import UserDetail from './components/UserDetail.jsx'
+import Redux from './components/Redux/Redux.jsx'
+import { Provider } from 'react-redux'
+import { store } from './components/Redux/Store.js'
+import ReduxToolKit from './components/ReduxToolkit/ReduxToolKit.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" Component={App} />
-          <Route path="/convertor" Component={CurrencyConvertor} />
-          {/* <Route path="/houses" Component={Houses} >
+    <Provider store={store}>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" Component={App} />
+            <Route path="/convertor" Component={CurrencyConvertor} />
+            {/* <Route path="/houses" Component={Houses} >
             <Route index Component={Stark} />
             <Route path="lannister" Component={Lannister} />
             <Route path="targaryen" Component={Targaryen} />
           </Route> */}
 
-          <Route path="/got/houses" element={<Houses />} />
-          <Route path="/got/houses/:houseId" element={<House />}>
-            <Route path=":characterId" element={<Character />} />
-          </Route>
+            <Route path="/got/houses" element={<Houses />} />
+            <Route path="/got/houses/:houseId" element={<House />}>
+              <Route path=":characterId" element={<Character />} />
+            </Route>
 
-         
-          <Route path="/users/list?" Component={UserList} />
-          
-          <Route path="/users/:id/:name?" Component={UserDetail} />
-          
-          
 
-          <Route path="/*" Component={PageNotFound} />
-          {/* <Route path ="/*" element={<Navigate to="/" />} /> */}
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+            <Route path="/users/list?" Component={UserList} />
+
+            <Route path="/users/:id/:name?" Component={UserDetail} />
+
+            <Route path="/redux" Component={Redux} />
+            
+            <Route path="/reduxtoolkit" Component={ReduxToolKit} />
+
+            <Route path="/*" Component={PageNotFound} />
+            {/* <Route path ="/*" element={<Navigate to="/" />} /> */}
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
   </StrictMode>,
 )

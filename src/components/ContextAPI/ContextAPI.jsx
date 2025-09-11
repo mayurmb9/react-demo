@@ -7,7 +7,7 @@ export default function ContextAPI() {
     return (
         <div style={{ background: "gray", padding: "1rem" }}>
             <h3>Context API</h3>
-            {/* <College /> */}
+            <College />
 
             <div style={{
                 display: "flex",
