@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-export default function ControlledComponent() {
+export default function UncontrolledComponent() {
 
-  const [name, setName] = React.useState("")
-  const [email, setEmail] = React.useState("")
-  const [password, setPassword] = React.useState("")
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
+  const passwordRef = useRef(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     alert(`
-      Name: ${name}
-      Email: ${email}
-      Password: ${password}
+      Name: ${nameRef.current.value}
+      Email: ${emailRef.current.value}
+      Password: ${passwordRef.current.value}
     `)
+  }
+
+  const handleReset = () => {
+    if (nameRef.current) nameRef.current.value = ""
+    if (emailRef.current) emailRef.current.value = ""
+    if (passwordRef.current) passwordRef.current.value = ""
   }
 
   return (
@@ -27,67 +33,63 @@ export default function ControlledComponent() {
       margin: "1em auto"
 
     }}>
-      <h3>Controlled Component</h3>
-      <form  onSubmit={handleSubmit}  action="" style={{ display: "block"}} >
+      <h3>Uncontrolled Component</h3>
+      <form onSubmit={handleSubmit} style={{ display: "block"}} >
         <label className="label" htmlFor="name">
-          Name  -
+          Name -
         </label>
         <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          ref={nameRef}
           placeholder='Enter User Name'
           className="input-field"
           type="text"
           name="name"
-          id="name" />
-        <br />
-        <br />
+          id="name"
+        />
+        <br /><br />
+
         <label className="label" htmlFor="email">
           Email -
         </label>
         <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          ref={emailRef}
           placeholder='Enter User Email'
           className="input-field"
           type="email"
           name="email"
-          id="email" />
-        <br />
-        <br />
+          id="email"
+        />
+        <br /><br />
+
         <label className="label" htmlFor="password">
           Password -
         </label>
         <input
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
+          ref={passwordRef}
           placeholder='Enter User Password'
           className="input-field"
           type="password"
           name="password"
           id="password"
         />
-        <br />
-        <br />
+        <br /><br />
+
         <button
           className="input-field"
           style={{ backgroundColor: "green" }}
           type="submit"
-          value="Submit" >Submit</button>
+        >
+          Submit
+        </button>
+
         <button
-          onClick={() => {
-            setName("")
-            setEmail("")
-            setPassword("")
-          }}
+          onClick={handleReset}
           className="input-field"
           style={{ backgroundColor: "#df0000" }}
-          type="reset"
-          value="Reset" >Reset</button>
-        {name && <h4>Name :- {name}</h4>}
-        {email && <h4>Email :- {email}</h4>}
-        {password && <h4>Password :- {password}</h4>}
-
+          type="button"
+        >
+          Reset
+        </button>
       </form>
     </div>
   )
