@@ -21,10 +21,12 @@ import Redux from './components/Redux/Redux.jsx'
 import { Provider } from 'react-redux'
 import { store } from './components/Redux/Store.js'
 import ReduxToolKit from './components/ReduxToolkit/ReduxToolKit.jsx'
+import rtkStore from './components/ReduxToolkit/RTKStore.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> Redux store */}
+    <Provider store = {rtkStore}>
       <ThemeProvider>
         <BrowserRouter>
           <Header />

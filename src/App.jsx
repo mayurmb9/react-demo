@@ -18,6 +18,7 @@ import State from './components/State'
 import Toggle from './components/Toggle'
 import ContextAPI from './components/ContextAPI/ContextAPI'
 import { CartProvider, SubjectProvider } from './components/ContextAPI/ContextData'
+import UncontrolledComponent from './components/UncontrolledComponent'
 
 function App() {
   const [view, setView] = useState("image")
@@ -52,6 +53,8 @@ function App() {
         <button onClick={() => setView("inputField")}>Input Field</button>
 
         <button onClick={() => setView("controlledComponent")}>Controlled Component</button>
+        <button onClick={() => setView("unControlledComponent")}>Uncontrolled Component</button>
+
 
         <button onClick={() => setView("checkbox")}>Checkbox</button>
         <button onClick={() => setView("radioDropdown")}>Radio & Dropdown</button>
@@ -83,6 +86,8 @@ function App() {
       {view === "inputField" && <InputField />}
 
       {view === "controlledComponent" && <ControlledComponent />}
+    
+      {view === "unControlledComponent" && <UncontrolledComponent />}
 
       {view === "checkbox" && <Checkbox />}
       {view === "radioDropdown" && <RadioDropDown />}

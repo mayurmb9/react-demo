@@ -48,7 +48,7 @@
 .label {
   margin-right: 10px;
   padding: 5px;
-  color: black;
+  color: var(--color-text)
 }
 
 .swap-button {
@@ -277,4 +277,142 @@
   color: #888;
   font-size: 1.1rem;
   padding: 20px 0;
+}
+
+.app-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+
+form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+input.form-control {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+button.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button.btn:active {
+  transform: scale(0.97);
+}
+
+button.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+.todo-container {
+  margin-top: 16px;
+}
+
+.todo-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.todo-text {
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+  word-break: break-word;
+}
+
+
+.todo-remove {
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.todo-remove:hover {
+  background: #e04344;
+}
+
+.todo-remove:active {
+  transform: scale(0.95);
+}
+
+
+.todo-empty {
+  text-align: center;
+  padding: 16px;
+  font-size: 1rem;
+  color: #777;
+  background: #f4f6f8;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
 }
