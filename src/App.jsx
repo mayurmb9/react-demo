@@ -19,6 +19,7 @@ import Toggle from './components/Toggle'
 import ContextAPI from './components/ContextAPI/ContextAPI'
 import { CartProvider, SubjectProvider } from './components/ContextAPI/ContextData'
 import UncontrolledComponent from './components/UncontrolledComponent'
+import { Link } from 'react-router'
 
 function App() {
   const [view, setView] = useState("image")
@@ -28,7 +29,7 @@ function App() {
   return (
     <div style={{ padding: "2rem" }}>
       <h3>React JS</h3>
-      <nav style={{
+      <div style={{
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
@@ -68,7 +69,11 @@ function App() {
 
         <button onClick={() => setView("context")}>Context API</button>
 
-      </nav>
+        <Link className='link' to="/forms" >
+          Forms
+        </Link>
+
+      </div>
 
       <hr />
 
@@ -86,7 +91,7 @@ function App() {
       {view === "inputField" && <InputField />}
 
       {view === "controlledComponent" && <ControlledComponent />}
-    
+
       {view === "unControlledComponent" && <UncontrolledComponent />}
 
       {view === "checkbox" && <Checkbox />}

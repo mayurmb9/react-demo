@@ -22,6 +22,8 @@ import { Provider } from 'react-redux'
 import { store } from './components/Redux/Store.js'
 import ReduxToolKit from './components/ReduxToolkit/ReduxToolKit.jsx'
 import rtkStore from './components/ReduxToolkit/RTKStore.js'
+import Forms from './components/FormValidations/Forms.jsx'
+import Login from './components/FormValidations/Login.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -52,6 +54,12 @@ createRoot(document.getElementById('root')).render(
             <Route path="/redux" Component={Redux} />
             
             <Route path="/reduxtoolkit" Component={ReduxToolKit} />
+
+            <Route path='/forms' Component={Forms}>
+              <Route index Component={Login} />
+                <Route path="login" Component={Login} />
+            </Route>
+
 
             <Route path="/*" Component={PageNotFound} />
             {/* <Route path ="/*" element={<Navigate to="/" />} /> */}
