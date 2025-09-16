@@ -69,9 +69,9 @@ function App() {
 
         <button onClick={() => setView("context")}>Context API</button>
 
-        <Link className='link' to="/forms" >
-          Forms
-        </Link>
+        <Link className='link' to="/forms" >Forms</Link>
+
+        <Link className='link' to="/apis" >APIS</Link>
 
       </div>
 

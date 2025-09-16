@@ -24,11 +24,13 @@ import ReduxToolKit from './components/ReduxToolkit/ReduxToolKit.jsx'
 import rtkStore from './components/ReduxToolkit/RTKStore.js'
 import Forms from './components/FormValidations/Forms.jsx'
 import Login from './components/FormValidations/Login.jsx'
+import APIS from './components/API/APIS.jsx'
+import FetchApi from './components/API/FetchApi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <Provider store={store}> Redux store */}
-    <Provider store = {rtkStore}>
+    <Provider store={rtkStore}>
       <ThemeProvider>
         <BrowserRouter>
           <Header />
@@ -52,13 +54,18 @@ createRoot(document.getElementById('root')).render(
             <Route path="/users/:id/:name?" Component={UserDetail} />
 
             <Route path="/redux" Component={Redux} />
-            
+
             <Route path="/reduxtoolkit" Component={ReduxToolKit} />
 
             <Route path='/forms' Component={Forms}>
-              <Route index Component={Login} />
-                <Route path="login" Component={Login} />
+              <Route path="login" Component={Login} />
             </Route>
+
+            <Route path='/apis' Component={APIS}>
+              <Route index Component={FetchApi} />
+              <Route path="fetch" Component={FetchApi} />
+            </Route>
+
 
 
             <Route path="/*" Component={PageNotFound} />
