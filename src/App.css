@@ -416,3 +416,12 @@ button.btn-primary:hover {
   border-radius: 8px;
   border: 1px dashed #ccc;
 }
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+
+}

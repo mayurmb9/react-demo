@@ -1,30 +1,55 @@
-import { useState } from 'react'
-import './App.css'
-import Checkbox from './components/Checkbox'
-import ClickEvent from './components/ClickEvent'
-import Component from './components/Component'
-import ControlledComponent from './components/ControlledComponent'
-import CurrencyConvertor from './components/CurrencyConvertor/CurrencyConvertor'
-import Hooks from './components/Hooks'
-import Image from './components/Image'
-import InputField from './components/InputField'
-import JSX from './components/JSX'
-import Loops from './components/Loops'
-import MultiConditional from './components/MultiConditional'
-import Props from './components/Props'
-import RadioDropDown from './components/RadioDropDown'
-import Router from './components/Router'
-import State from './components/State'
-import Toggle from './components/Toggle'
-import ContextAPI from './components/ContextAPI/ContextAPI'
-import { CartProvider, SubjectProvider } from './components/ContextAPI/ContextData'
-import UncontrolledComponent from './components/UncontrolledComponent'
+// import { useState } from 'react'
+// import './App.css'
+// import Checkbox from './components/Checkbox'
+// import ClickEvent from './components/ClickEvent'
+// import Component from './components/Component'
+// import ControlledComponent from './components/ControlledComponent'
+// import CurrencyConvertor from './components/CurrencyConvertor/CurrencyConvertor'
+// import Hooks from './components/Hooks'
+// import Image from './components/Image'
+// import InputField from './components/InputField'
+// import JSX from './components/JSX'
+// import Loops from './components/Loops'
+// import MultiConditional from './components/MultiConditional'
+// import Props from './components/Props'
+// import RadioDropDown from './components/RadioDropDown'
+// import Router from './components/Router'
+// import State from './components/State'
+// import Toggle from './components/Toggle'
+// import ContextAPI from './components/ContextAPI/ContextAPI'
+// import { CartProvider, SubjectProvider } from './components/ContextAPI/ContextData'
+// import UncontrolledComponent from './components/UncontrolledComponent'
+// import { Link } from 'react-router'
+
+
+
 import { Link } from 'react-router'
+import { lazy, useState } from 'react'
+import { CartProvider, SubjectProvider } from './components/ContextAPI/ContextData.jsx';
+
+const JSX = lazy(() => import('./components/JSX.jsx'));
+const Image = lazy(() => import('./components/Image.jsx'));
+const Hooks = lazy(() => import('./components/Hooks.jsx'));
+const Loops = lazy(() => import('./components/Loops.jsx'));
+const State = lazy(() => import('./components/State.jsx'));
+const Props = lazy(() => import('./components/Props.jsx'));
+const Toggle = lazy(() => import('./components/Toggle.jsx'));
+const Router = lazy(() => import('./components/Router.jsx'));
+const Checkbox = lazy(() => import('./components/Checkbox.jsx'));
+const Component = lazy(() => import('./components/Component.jsx'));
+const InputField = lazy(() => import('./components/InputField.jsx'));
+const ClickEvent = lazy(() => import('./components/ClickEvent.jsx'));
+const RadioDropDown = lazy(() => import('./components/RadioDropDown.jsx'));
+const ContextAPI = lazy(() => import('./components/ContextAPI/ContextAPI.jsx'));
+const MultiConditional = lazy(() => import('./components/MultiConditional.jsx'));
+const ControlledComponent = lazy(() => import('./components/ControlledComponent.jsx'));
+const UncontrolledComponent = lazy(() => import('./components/UncontrolledComponent.jsx'));
+const CurrencyConvertor = lazy(() => import('./components/CurrencyConvertor/CurrencyConvertor.jsx'));
+
 
 function App() {
+
   const [view, setView] = useState("image")
-
-
 
   return (
     <div style={{ padding: "2rem" }}>
@@ -37,11 +62,8 @@ function App() {
         gap: "1rem"
       }}>
 
-
-
         <button onClick={() => setView("component")}>Component</button>
         <button onClick={() => setView("image")}>Image</button>
-
 
         <button onClick={() => setView("jsx")}>JSX</button>
         <button onClick={() => setView("clickEvent")}>Click Event</button>

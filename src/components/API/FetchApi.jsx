@@ -146,7 +146,8 @@ export default function FetchApi() {
 
     return (
 
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "start", gap: "1rem" }}>
+         <div className='left-container'>
+
             <h3>Fetch Api</h3>
 
             <div style={{ display: "flex", gap: "1rem" }}>
