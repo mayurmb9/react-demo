@@ -42,7 +42,7 @@ function CustomPromise() {
   };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+    <div style={{ padding: "20px" }}>
       <h2>🍽️ Food Order (Promises)</h2>
       <button onClick={handleOrder} style={{ padding: "10px 20px" }}>
         Place Order

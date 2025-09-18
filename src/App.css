@@ -425,3 +425,45 @@ button.btn-primary:hover {
   gap: 1rem;
 
 }
+
+.widget-success-div {
+  padding: 10px;
+  background: #e0f6e0;
+  border-radius: 5px;
+  color: green;
+}
+
+.global-fallback-container {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: crimson
+}
+
+.retry-button {
+  padding: 5px 10px;
+  background: white;
+  border: none;
+  color: crimson;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold
+}
+
+.widget-falllback-container {
+  padding: 10px;
+  background: #ffe0e0;
+  border-radius: 5px
+}
+
+.section {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: "5px"
+}
+
+.error-boundaries-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}

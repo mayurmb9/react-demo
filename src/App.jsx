@@ -23,8 +23,8 @@
 
 
 
-import { Link } from 'react-router'
-import { lazy, useState } from 'react'
+import { lazy, useState } from 'react';
+import { Link } from 'react-router';
 import { CartProvider, SubjectProvider } from './components/ContextAPI/ContextData.jsx';
 
 const JSX = lazy(() => import('./components/JSX.jsx'));
@@ -95,6 +95,8 @@ function App() {
 
         <Link className='link' to="/apis" >APIS</Link>
 
+        <Link className='link' to="/performance" >Performance</Link>
+
       </div>
 
       <hr />
@@ -137,4 +139,5 @@ function App() {
 
 
 export default App
+
 
