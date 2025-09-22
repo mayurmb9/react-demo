@@ -13,13 +13,13 @@ function InputBox({
 }) {
   const amountId = useId();
   return (
-    <div className='input-box' >
+    <div className='input-box'  >
 
       <div className='input-container'>
 
         <label
           htmlFor={amountId}
-          className='label' >
+          className='label' style={{ color: "black" }} >
           {label}
         </label>
 
@@ -36,7 +36,7 @@ function InputBox({
       </div>
       <div className='input-container'>
 
-        <label className='label'>Currency Type</label>
+        <label className='label' style={{ color: "black" }} >Currency Type</label>
 
         <select
           className="currency-select"
