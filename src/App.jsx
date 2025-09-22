@@ -37,8 +37,8 @@ const Toggle = lazy(() => import('./components/Toggle.jsx'));
 const Router = lazy(() => import('./components/Router.jsx'));
 const Checkbox = lazy(() => import('./components/Checkbox.jsx'));
 const Component = lazy(() => import('./components/Component.jsx'));
-const InputField = lazy(() => import('./components/InputField.jsx'));
 const ClickEvent = lazy(() => import('./components/ClickEvent.jsx'));
+const InputField = lazy(() => import('./components/InputField.jsx'));
 const RadioDropDown = lazy(() => import('./components/RadioDropDown.jsx'));
 const ContextAPI = lazy(() => import('./components/ContextAPI/ContextAPI.jsx'));
 const MultiConditional = lazy(() => import('./components/MultiConditional.jsx'));
@@ -96,6 +96,10 @@ function App() {
         <Link className='link' to="/apis" >APIS</Link>
 
         <Link className='link' to="/performance" >Performance</Link>
+
+        <Link className='link' to="/hoc" >High Order Component</Link>
+
+        <Link className='link' to="/should-component-update" >Should Component Update</Link>
 
       </div>
 
